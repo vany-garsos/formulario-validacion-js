@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de entrega</title>
+    <!--Boostrap 5-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="row">
+    <form id="formulario">
+    <div class="col-12 contenedor-principal">
+
+            <h3 class="titulos">1. Información del cliente</h3>
+            <p class="indicaciones">Te enviaremos confirmacion del pedido a tu cuenta</p>
+            <div class="row inputGroup">
+                <div class="col-12">
+                    <div class="inputForm">
+                        <input type="email" name="correo" placeholder="correo" id="correo" required>
+                        <label for="correo">Correo electrónico</label>
+                    </div>
+                    <p class="correcto" id="error_correo">El correo electrónico no es válido</p>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="inputForm">
+                        <input type="text" name="nombre" placeholder="nombre" id="nombre" required>
+                        <label for="nombre">Nombre(s)*</label>
+                    </div>
+                    <p class="correcto" id="error_nombre">El nombre no puede contener números ni caracteres especiales
+                    </p>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="inputForm">
+                        <input type="text" name="apellidos" placeholder="apellidos" id="apellidos" required>
+                        <label for="apellidos">Apellidos*</label>
+                    </div>
+                    <p class="correcto" id="error_apellidos">Los apellidos no pueden contener números ni caracteres
+                        especiales</p>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="inputForm">
+                        <input type="number" name="telefono" placeholder="numero" id="telefono" required>
+                        <label for="telefono">Telefono (10 dígitos)</label>
+                    </div>
+                    <p class="correcto" id="error_telefono">El numero debe contener 10 dígitos. No letras ni otros
+                        caracteres</p>
+                </div>
+
+                <div class="col-12 col-md-6 text-center py-3">
+                    <input type="radio" name="tipo_telefono" value="fijo"> Fijo
+                    <input type="radio" name="tipo_telefono" value="celular"> Celular
+                </div>
+
+            </div>
+    </div>
+
+    <div class="col-12 contenedor-principal">
+            <h3 class="titulos">2. Dirección de entrega</h3>
+            <p class="indicaciones">La fecha de entrega puede variar por la disponibilidad del producto</p>
+            <div class="row inputGroup">
+                <div class="col-12">
+                    <div class="inputForm">
+                        <input type="text" name="calle" placeholder="calle" id="calle">
+                        <label for="calle">Calle</label>
+                    </div>
+                    <p class="correcto" id="error_calle">Máximo 40 caracteres</p>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="inputForm">
+                        <input type="text" name="ciudad" placeholder="ciudad" id="ciudad">
+                        <label for="ciudad">Ciudad</label>
+                    </div>
+                    <p class="correcto" id="error_ciudad">Maximo 40 caracteres</p>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="selects">
+                        <select name="estado" id="estado">
+                            <option value="">Selecciona un estado</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="selects">
+                        <select name="municipio" id="municipio">
+                            <option value="">Selecciona un municipio</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-6">
+                    <div class="inputForm">
+                        <input type="text" name="cp" placeholder="cp" id="cp">
+                        <label for="cp">C.P.</label>
+                    </div>
+                    <p class="correcto" id="error_cp">El Código Postal debe contener 5 dígitos. No letras ni otros
+                        caracteres</p>
+                </div>
+
+            </div>
+    </div>
+    </form>
+    <script src="formulario.js"></script>
+</body>
+
+</html>
